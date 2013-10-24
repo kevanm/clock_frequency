@@ -1,5 +1,7 @@
 #include <msp430.h> 
 #include "lcd.h"
+#include "clock_frequencies.h"
+#include "buttons/button.h"
 /*
  * main.c
  */
@@ -15,6 +17,7 @@ void main(void) {
     char button[] = {'P','r','e','s','s','1','2','3'};
 
     initSPI();
+    setClock();
 	LCDinit();
 	LCDclear();
 

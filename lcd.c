@@ -4,8 +4,9 @@
  * Date: 22 Oct 13
  ***********/
 
-#include <msp430.h>
+#include "msp430.h"
 #include "lcd.h"
+//#include "buttons/button.h"
 
 #define RS_MASK 0x40
  int LCDCON = 0x0;
@@ -34,6 +35,7 @@ void initSPI()
 
 	UCB0CTL1 &= ~ UCSWRST;
 }
+
 
 void set_SS_lo()
 {
